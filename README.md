@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -16,21 +14,32 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About App
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project is a simple restaurant management app built with Next.js, Tailwind CSS, and Redux. The database is stored in the browser's local storage for demonstration purposes. 
 
-## Learn More
+## Features
+- Menu (View, Edit, delete)
+- Order (View, Add, increase, decrease, delete)
+- Kitchen (View, Checked, Unchecked order)
+- Cashier (View order)
+- Reset
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
+- Next.js: A React framework for building server-rendered React applications.
+- Tailwind CSS: A utility-first CSS framework for rapidly building custom designs.
+- Redux: A state management library for managing application state.
+- Local Storage: Used for storing restaurant data locally in the browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshot
+- Menu
+![menu](https://github.com/mila1349/ambisius-ap/assets/85621548/fcf7f6af-f09c-49f0-a8a9-914d42f0cf3c)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Order
+![order](https://github.com/mila1349/ambisius-ap/assets/85621548/298e81b0-a30c-4030-bfe2-66d15e354c63)
 
-## Deploy on Vercel
+- Kitchen
+![kitchen](https://github.com/mila1349/ambisius-ap/assets/85621548/f0039ed4-9188-4802-8a4a-70a025fadaa9)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Cashier
+![cashier](https://github.com/mila1349/ambisius-ap/assets/85621548/28c99417-338e-47c3-985c-4aa7ca188b64)
