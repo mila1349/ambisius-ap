@@ -22,6 +22,7 @@ const Kitchen = () => {
                     {
                       tables.map(item=>(
                         <TableCard
+                          key={item.id}
                           id={item.id}
                           isOccupied={item.isOccupied}
                           name={'Table ' + item.id}

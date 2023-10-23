@@ -15,7 +15,7 @@ const ListKitchen = (props:ListKitchenProps) => {
     <div className="w-100 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         {
             props.orders.map(item=>(
-                <div className="w-full flex px-4 py-4 border-b border-gray-200 rounded-t-lg dark:border-gray-600 items-center">
+                <div key={item.id} className="w-full flex px-4 py-4 border-b border-gray-200 rounded-t-lg dark:border-gray-600 items-center">
                     <input id="link-checkbox" type="checkbox" checked={item.isDone} onChange={()=>dispatch(toogleOrder({
                         tableId:props.selectedTable,
                         menuId:item.id

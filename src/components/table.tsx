@@ -11,7 +11,6 @@ export type BodyData = {
 }
 
 const Table = (props:TableProps) => {
-    console.log("bvgftyujk",props.tbodyData)
     return (
         <div className="relative overflow-x-auto bg-white rounded-md">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -19,7 +18,7 @@ const Table = (props:TableProps) => {
                 <tr>
                     {
                         props.theadData.map(item=>(
-                            <td scope="col" className="px-6 py-3" title={item}>
+                            <td key={item} scope="col" className="px-6 py-3" title={item}>
                                 {item}
                             </td>
                         ))
@@ -29,9 +28,9 @@ const Table = (props:TableProps) => {
 
             <tbody>
                 {props.tbodyData.map((item) => (
-                    <tr className="border-b dark:bg-gray-800 dark:border-gray-700">
+                    <tr key={item.id} className="border-b dark:bg-gray-800 dark:border-gray-700">
                         {item.items.map((it) => {
-                            return <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{it}</td>;
+                            return <td key={it} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{it}</td>;
                         })}
                     </tr>
                 ))}

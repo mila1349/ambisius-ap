@@ -15,7 +15,7 @@ const ListOrder = (props:ListOrderProps) => {
     <div className="w-100 ml-4 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         {
             props.orders.map(item=>(
-                <div className="w-full flex px-4 py-4 border-b border-gray-200 rounded-t-lg dark:border-gray-600 justify-between items-center">
+                <div key={item.id} className="w-full flex px-4 py-4 border-b border-gray-200 rounded-t-lg dark:border-gray-600 justify-between items-center">
                     <div className="flex">
                         <p className="mr-4 bold">{item.name}</p>
                         <p className="bold ">(x{item.qty})</p> 

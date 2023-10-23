@@ -35,6 +35,7 @@ export default function Home() {
                 {
                   menus.map(item=>(
                     <MenuCard
+                      key={item.id}
                       id={item.id}
                       title={item.name}
                       delete={true}

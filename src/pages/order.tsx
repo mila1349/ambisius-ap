@@ -27,6 +27,7 @@ const Order = () => {
                       {
                         menus.map(item=>(
                           <MenuCard
+                            key={item.id}
                             id={item.id}
                             title={item.name}
                             price={item.price}
@@ -50,6 +51,7 @@ const Order = () => {
                     {
                       tables.map(item=>(
                         <TableCard
+                          key={item.id}
                           id={item.id}
                           isOccupied={item.isOccupied}
                           name={'Table ' + item.id}
