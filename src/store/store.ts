@@ -3,7 +3,12 @@ import { MenuSlice } from "./features/menu";
 import { TableSlice } from "./features/table";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import storage from 'redux-persist/lib/storage';
-import { persistReducer } from "redux-persist";
+import { persistReducer,  FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER, } from "redux-persist";
 
 const reducers = combineReducers({
     menu: MenuSlice.reducer,
@@ -19,6 +24,13 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
     reducer:persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+
 })
 
 export const useAppDispatch:()=>typeof  store.dispatch = useDispatch;
